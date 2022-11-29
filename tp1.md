@@ -35,13 +35,13 @@ gitGraph
     commit
     branch dev
     commit
-    branch "10.5"
+    branch v10_5
     commit
     commit
     branch feature/new_footer
     commit
     commit
-    checkout "10.5"
+    checkout v10_5
     branch feature/new_login_form
     commit
     commit
@@ -52,7 +52,7 @@ gitGraph
     commit
     commit tag:"pull request"
     merge feature/new_footer
-    merge "10.5"
+    merge v10_5
     merge tests
     commit "hotfix/new_form_event_error"
     merge qualif
