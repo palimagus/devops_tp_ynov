@@ -20,3 +20,40 @@ graph TD;
     RabbitMQ-->Boîte_rouge;
     RabbitMQ-->Boîte_verte;
 ```
+
+**Processus de développement**
+
+```mermaid
+gitGraph;
+    commit
+    commit
+    branch qualif
+    commit
+    commit
+    branch tests
+    commit
+    commit
+    branch dev
+    commit
+    branch 10.5
+    commit
+    commit
+    branch feature/new_footer
+    commit
+    commit
+    checkout 10.5
+    branch feature/new_login_form
+    commit
+    commit
+    commit
+    commit tag:"pull request"
+    merge feature/new_login_form
+    checkout feature/new_footer
+    commit
+    commit tag:"pull request"
+    merge feature/new_footer
+    merge 10.5
+    merge tests
+    commit "hotfix/new_form_event_error"
+    merge qualif
+    merge main
