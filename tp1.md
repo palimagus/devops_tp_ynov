@@ -38,10 +38,13 @@ gitGraph
     commit
     commit
     commit tag:"pull request"
+    checkout v1
+    branch feature/new_footer
+    commit
+    checkout feature/new_login_form
     commit "fix"
     checkout v1
     merge feature/new_login_form
-    branch feature/new_footer
     checkout feature/new_footer
     commit
     commit
