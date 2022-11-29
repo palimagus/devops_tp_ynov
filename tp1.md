@@ -8,9 +8,11 @@ Pour réaliser nos développements, nous utilisons des Skaffold privés contenan
 
 **Schéma de l'infrastructure OneStock:**
 
+```mermaid
 graph TD;
     API principale-->Micro-services;
     Micro_services-->Boîte_rouge;
     Micro_services-->Boîte_verte;
     Boîte_rouge<->RabbitMQ;
     Boîte_verte<->RabbitMQ;
+```
