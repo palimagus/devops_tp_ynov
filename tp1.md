@@ -13,6 +13,8 @@ graph TD;
     API-->Micro-services;
     Micro_services-->Boîte_rouge;
     Micro_services-->Boîte_verte;
-    Boîte_rouge<->RabbitMQ;
-    Boîte_verte<->RabbitMQ;
+    Boîte_rouge-->RabbitMQ;
+    Boîte_verte-->RabbitMQ;
+    RabbitMQ-->Boîte_rouge;
+    RabbitMQ-->Boîte_verte;
 ```
