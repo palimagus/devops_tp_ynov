@@ -47,13 +47,13 @@ gitGraph
     commit
     commit
     commit tag:"pull request"
-    merge feature/new_login_form
+    merge v10_5
     checkout feature/new_footer
     commit
     commit tag:"pull request"
-    merge feature/new_footer
     merge v10_5
+    checkout v10_5
     merge tests
+    checkout qualif
     commit "hotfix/new_form_event_error"
-    merge qualif
     merge main
