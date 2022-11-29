@@ -25,35 +25,22 @@ graph TD;
 
 ```mermaid
 gitGraph
-    commit
-    commit
     branch qualif
-    commit
-    commit
     branch tests
-    commit
-    commit
     branch dev
-    commit
-    branch v10_5
-    commit
-    commit
+    branch v1
     branch feature/new_footer
     commit
     commit
-    checkout v10_5
+    commit
+    commit tag:"pull request"
+    merge v1
     branch feature/new_login_form
     commit
     commit
     commit
     commit tag:"pull request"
-    merge v10_5
-    checkout feature/new_footer
-    commit
-    commit tag:"pull request"
-    merge v10_5
-    checkout v10_5
+    merge v1
     merge tests
-    checkout qualif
     commit "hotfix/new_form_event_error"
-    merge main
+    merge qualif
