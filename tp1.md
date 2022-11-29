@@ -10,7 +10,7 @@ Pour réaliser nos développements, nous utilisons des Skaffold privés contenan
 
 ```mermaid
 graph TD;
-    API principale-->Micro-services;
+    API-->Micro-services;
     Micro_services-->Boîte_rouge;
     Micro_services-->Boîte_verte;
     Boîte_rouge<->RabbitMQ;
