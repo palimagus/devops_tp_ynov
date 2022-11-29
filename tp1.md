@@ -21,10 +21,10 @@ graph TD;
     RabbitMQ-->Boîte_verte;
 ```
 
-**Processus de développement**
+**Processus de développement:**
 
 ```mermaid
-gitGraph;
+gitGraph
     commit
     commit
     branch qualif
