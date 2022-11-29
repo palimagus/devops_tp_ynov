@@ -41,6 +41,7 @@ gitGraph
     commit
     commit tag:"pull request"
     merge v1
+    commit tag:"release v1"
     merge tests
     commit "hotfix/new_form_event_error"
     merge qualif
