@@ -61,3 +61,11 @@ docker images
 ```bash
 docker run --name myNginx -p 80:80 -d tp_nginx_1
 ```
+
+### Conclusions
+
+L'utilisation d'une image personnalisée, créée par un `Dockerfile` permet d'allèger la commande de lancement du conteneur.
+
+Pour le développement, l'utilisation de volumes simplifie les processus car les images sont immuables. On perd ainsi en flexibilité.
+
+Cependant, pour partager notre projet ou lancer l'application dans un environnement de production, utiliser des images est le plus indiqué.
