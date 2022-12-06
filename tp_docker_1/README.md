@@ -1,13 +1,15 @@
 # TP Docker 1
 
-## Getting the image from HUB
+## Partie 1
+
+### Récupérer l'image depuis le HUB
 
 ```bash
 docker search nginx
 docker pull nginx
 ```
 
-## Verify the presence of nginx:latest image
+### Vérifier le téléchargement de notre image
 
 ```bash
 docker images
@@ -17,7 +19,7 @@ docker images
 |----------|--------|------------|-----------|-----|
 |nginx     |`latest`|ac8efec875ce|5 hours ago|142MB|
 
-## Servir la nouvelle page
+### Servir la nouvelle page
 
 ```bash
 docker run --name myNginx -v C:\Users\palim\.ynov\devops\tp_docker_1\html:/usr/share/nginx/html -p 80:80 -d nginx
@@ -25,17 +27,19 @@ docker run --name myNginx -v C:\Users\palim\.ynov\devops\tp_docker_1\html:/usr/s
 
 `ccbb8eb9978bfe76a98410caf95d8f57ef72375adb884db1bb8357d9d6f1a9a1`
 
-## Supprimer le container
+### Supprimer le container
 
 ```bash
 docker container stop cc
 docker container rm cc
 ```
 
-## Copier les fichiers avec `cp`
+### Copier les fichiers avec `cp`
 
 ```bash
 docker volume create nginx-html
 docker run --name myNginx -v nginx-html:/usr/share/nginx/html -p 80:80 -d nginx
 docker cp .\html\index.html myNginx:/usr/share/nginx/html
 ```
+
+## Partie 2
