@@ -55,3 +55,9 @@ docker images
 |----------|:------:|------------|--------------|-----|
 |tp_nginx_1|`latest`|e7a4bac2326a|14 seconds ago|142MB|
 |nginx     |`latest`|ac8efec875ce|6 hours ago   |142MB|
+
+### Lancer cette nouvelle image
+
+```bash
+docker run --name myNginx -p 80:80 -d tp_nginx_1
+```
