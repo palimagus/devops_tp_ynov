@@ -43,3 +43,15 @@ docker cp .\html\index.html myNginx:/usr/share/nginx/html
 ```
 
 ## Partie 2
+
+### Créer une image avec Dockerfile
+
+```bash
+docker build -t tp_nginx_1 .
+docker images
+```
+
+|REPOSITORY|TAG     |IMAGE ID    |CREATED       |SIZE |
+|----------|:------:|------------|--------------|-----|
+|tp_nginx_1|`latest`|e7a4bac2326a|14 seconds ago|142MB|
+|nginx     |`latest`|ac8efec875ce|6 hours ago   |142MB|
