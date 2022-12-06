@@ -17,5 +17,10 @@ docker images
 |----------|--------|------------|-----------|-----|
 |nginx     |`latest`|ac8efec875ce|5 hours ago|142MB|
 
-Create volume:
-docker volume create nginx-html
+## Servir la nouvelle page
+
+```bash
+docker run --name myNginx -v C:\Users\palim\.ynov\devops\tp_docker_1\html:/usr/share/nginx/html -p 80:80 -d nginx
+```
+
+`ccbb8eb9978bfe76a98410caf95d8f57ef72375adb884db1bb8357d9d6f1a9a1`
