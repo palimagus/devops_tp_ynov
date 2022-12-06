@@ -31,3 +31,11 @@ docker run --name myNginx -v C:\Users\palim\.ynov\devops\tp_docker_1\html:/usr/s
 docker container stop cc
 docker container rm cc
 ```
+
+## Copier les fichiers avec `cp`
+
+```bash
+docker volume create nginx-html
+docker run --name myNginx -v nginx-html:/usr/share/nginx/html -p 80:80 -d nginx
+docker cp .\html\index.html myNginx:/usr/share/nginx/html
+```
