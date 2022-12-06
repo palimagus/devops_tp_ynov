@@ -24,3 +24,10 @@ docker run --name myNginx -v C:\Users\palim\.ynov\devops\tp_docker_1\html:/usr/s
 ```
 
 `ccbb8eb9978bfe76a98410caf95d8f57ef72375adb884db1bb8357d9d6f1a9a1`
+
+## Supprimer le container
+
+```bash
+docker container stop cc
+docker container rm cc
+```
