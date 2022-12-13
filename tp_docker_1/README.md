@@ -122,3 +122,10 @@ gitGraph
     checkout v1
     merge feature/new_footer
 ```
+
+## Partie 3
+
+Utilisation des images docker MySQL et PHPMyAdmin.
+
+`docker pull mysql`  
+`docker pull phpmyadmin`
