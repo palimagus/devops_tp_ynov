@@ -6,12 +6,10 @@
 
 // Uncomment this block to use mysql
 module.exports = {
-    dialect: "mysql",
-    hostname: "172.17.0.2",
-    username: "root",
-    password: "1234",
-    database: "quentin",
-    port: 3306
+    dialect: process.env.DB_DIALECT || "mysql",
+    hostname: process.env.DB_HOST || "localhost",
+    username: process.env.DB_USER || "quentin",
+    password: process.env.DB_PASSWORD || "quentin",
+    database: process.env.DB_NAME || "quentin",
+    port: process.env.DB_PORT || 3306
 }
-
-// TODO : adapt this file to load parameters from environment variables (process.env.VARIABLE_NAME)

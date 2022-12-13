@@ -1,0 +1,29 @@
+services:
+  api:
+    container_name: tp_api
+    build:
+      context: ./src
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST = db
+      - DB_USER = quentin
+      - DB_PASSWORD = quentin
+      - DB_NAME = quentin
+      - DB_PORT = 3001
+      - DB_DIALECT = mysql
+  db:
+    container_name: tp_mariadb
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: quentin
+      MYSQL_USER: quentin
+      MYSQL_PASSWORD: quentin
+    ports:
+      - "3001:3306"
+    
