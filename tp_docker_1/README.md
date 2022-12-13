@@ -129,3 +129,11 @@ Utilisation des images docker MySQL et PHPMyAdmin.
 
 `docker pull mysql`  
 `docker pull phpmyadmin`
+
+Lancer la base MySQL
+
+`docker run --name tp_mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:latest`
+
+Lancer un conteneur PHPMyAdmin et le lier avec la base MySQL
+
+`docker run --name tp_myadmin -d --link tp_mysql:db -p 8080:80 phpmyadmin`
