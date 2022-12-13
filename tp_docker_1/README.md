@@ -139,3 +139,10 @@ Lancer un conteneur PHPMyAdmin et le lier avec la base MySQL
 `docker run --name tp_myadmin -d --link tp_mysql:db -p 8080:80 phpmyadmin`
 
 [Capture état bdd](images/status_mysql_tp_1.PNG)
+
+## Partie 4
+
+Nous allons utiliser Docker compose afin de lancer tous nos conteneurs et les liers. On obtient un script regroupant toutes les étapes de lancement et autres configurations.
+
+`docker-compose up`  
+`docker-compose down`

@@ -1,0 +1,24 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: tp_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: tp
+      MYSQL_USER: tp
+      MYSQL_PASSWORD: tp
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: tp_myadmin
+    restart: always
+    environment:
+      PMA_HOST: tp_mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: 1234
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
